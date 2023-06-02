@@ -411,7 +411,7 @@ public class MoiUniversityFilter {
 						if(!cellInValue.isEmpty()) { //if clocked in
 							String [] values = cellInValue.split(":");
 							
-							if(Integer.parseInt(values[0]) < 9) { //if stayed less than 9 hours
+							if(Integer.parseInt(values[0]) < 8) { //if stayed less than 9 hours
 								
 								Cell cell5 = row.getCell(0, Row.MissingCellPolicy.RETURN_BLANK_AS_NULL);
 				            	pfNo = dataFormatter.formatCellValue(cell5);
@@ -494,7 +494,7 @@ public class MoiUniversityFilter {
 			contentStream.newLineAtOffset(50, 0);
 			contentStream.showText("Name");
 			contentStream.newLineAtOffset(130, 0);
-			contentStream.showText("No. Of Days (Less than 9 hours)");
+			contentStream.showText("No. Of Days (Less than 8 hours)");
 			contentStream.endText();
 
 			// Print the data to the PDF
